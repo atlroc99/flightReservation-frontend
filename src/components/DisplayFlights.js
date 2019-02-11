@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class DisplayFlights extends React.Component {
 
@@ -25,8 +26,6 @@ class DisplayFlights extends React.Component {
                // console.log('Response, ', data);
                 this.setState({flights: data});
                 console.log("state, " , this.state.flights);
-                
-
             })
             .catch(function (error) {
                 console.log(error);
@@ -68,6 +67,7 @@ class RowCreator extends React.Component{
                 <td>{flight.arrivalCity}</td>
                 <td>{flight.dateOfDeparture}</td>
                 <td>{flight.estimatedDepartureTime}</td>
+                <td><Link to={'/passengerDetails/'+ flight.id}>Select</Link></td>
             </tr>
         )
     }

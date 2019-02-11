@@ -16,8 +16,8 @@ class App extends Component {
           <Route exact path="/" component={FindFlights}/>
           {/* <Route exact path="/displayFlight/:fromCity/:toCity/:departureDate" component={DisplayFlights}/> */}
           <Route exact path="/displayFlight/:fromCity/:toCity" component={DisplayFlights}/>
-          <Route exact path="/passengerDetails" component={PassengerDetails}/>
-          <Route exact path="/reservationCofirmation" component={ConfirmReservation}/>
+          <Route exact path="/passengerDetails/:flightId" component={PassengerDetails}/>
+          <Route exact path="/reservationCofirmation/:reservationId" component={ConfirmReservation}/>
         </Switch>
       </div>
     );
